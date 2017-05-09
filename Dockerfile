@@ -41,5 +41,7 @@ RUN apk --no-cache add \
 
 # Expose volume for adding credentials
 VOLUME ["~/.aws"]
+COPY dynamodump /dynamodump
+RUN pip install -r /dynamodump/requirements.txt
 
 CMD ["/bin/bash", "--login"]
