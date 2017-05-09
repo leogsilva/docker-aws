@@ -14,6 +14,7 @@ ENV PAGER more
 WORKDIR /tmp
 
 RUN apk --no-cache add \
+      libxslt \
       bash \
       bash-completion \
       groff \
